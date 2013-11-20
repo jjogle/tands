@@ -1,0 +1,13 @@
+.slider-wrapper.theme-default
+  #slider.nivoSlider
+    = image_tag "TIM-Title-slide.png"
+    = image_tag "truck-title-headshot-slide.png"
+
+:javascript
+  $(window).load(function() {
+    $('#slider').nivoSlider({
+      effect: 'fade',
+      pauseTime: 15000,
+      animSpeed: 0
+    });
+  });

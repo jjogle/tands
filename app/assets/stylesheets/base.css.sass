@@ -1,0 +1,104 @@
+@import "compass/css3"
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300)
+$screen-mob: "max-width: 40em"
+$screen-tab: "max-width: 45em"
+$screen-sm: "max-width: 55.5em"
+$screen-med: "max-width: 75em"
+$screen-lg: "min-width: 76em"
+$black: #000000
+$dark-grey: #151413
+$med-grey: #333333
+$light-grey: #888888
+$margin: 1em
+$line-height: $margin * 1.5
+$text-1: $med-grey
+$title-1: $med-grey
+$title-2: $dark-grey
+$link: $light-grey
+
+.wrapper
+  width: 100%
+.wrapper-inner
+  +transition(1s)
+.column
+  +transition(1s)
+
+@media screen and ($screen-mob)
+  .wrapper-inner
+    margin-left: 2%
+
+@media screen and ($screen-tab)
+  .wrapper-inner
+    margin-left: 5%
+
+@media screen and ($screen-sm)
+  .wrapper-inner
+    margin-left: 7.5%
+
+@media screen and ($screen-med)
+  .wrapper-inner
+    margin-left: 12.5%
+
+@media screen and ($screen-lg)
+  .wrapper-inner
+    margin-left: 17%
+
+.alignleft
+  float: left
+  margin: 0 $margin / 2 $margin / 2 0
+
+.alignright
+  float: right
+  margin: 0 0 $margin / 2 $margin / 2
+
+.article-image
+  max-width: 150px
+
+body
+  font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif
+
+p, ol, link
+  color: $text-1
+  line-height: $line-height
+  font-size: $margin
+h1, h2, h3
+  color: $title-1
+  line-height: $line-height
+  font-family: 'Oswald', 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif
+  font-weight: 500
+h4, h5, h6
+  color: $title-2
+  font-family: 'Oswald', 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif
+  font-weight: 700
+  line-height: $line-height
+ol,ul
+  list-style-position: inside
+
+//mixins
+=border($position, $style, $color)
+  border-#{$position}: 2px $style $color
+  margin-#{$position}: $margin
+
+//Icons
+@font-face
+  font-family: '[set]Foundicons'
+  src: url('fonts/[set]_foundicons.eot')
+  src: url('fonts/[set]_foundicons.eot?#iefix') format('embedded-opentype'), url('fonts/[set]_foundicons.woff') format('woff'), url('fonts/[set]_foundicons.ttf') format('truetype'), url('fonts/[set]_foundicons.svg#[set]Foundicons') format('svg')
+  font-weight: normal
+  font-style: normal
+
+[class*="foundicon-"]
+  display: inline
+  width: auto
+  height: auto
+  line-height: inherit
+  vertical-align: baseline
+  background-image: none
+  background-position: 0 0
+  background-repeat: repeat
+
+[class*="foundicon-"]:before
+  font-family: "[set]Foundicons"
+  font-weight: normal
+  font-style: normal
+  text-decoration: inherit
