@@ -62,12 +62,12 @@ module Tands
     # Contact form details
     config.action_mailer.smtp_settings = {
       :address              => "mail.tandsmobilehearing.com",
-      :port                 => 587,
+      :port                 => 26,
       :domain               => "tandsmobilehearing.com",
-      :user_name            => "info@tandsmobilehearing.com",
+      :user_name            => "info+tandsmobilehearing.com",
       :password             => "rreod2005",
       :authentication       => :plain,
-      :enable_starttls_auto => true
+      :enable_starttls_auto => false
     }
 
     config.action_mailer.default_url_options = {
