@@ -12,6 +12,24 @@
         %li C: 406.670.6696
   .large-4.columns
     %h3.border-bottom Contact Form
+    = form_for @message, :url => contact_path do |form|
+      %fieldset.fields
+        .field
+          = form.label :name
+          = form.text_field :name
+        .field
+          = form.label :email
+          = form.text_field :email
+        .field
+          = form.label :subject
+          = form.text_field :subject
+        .field
+          = form.label :body
+          = form.text_area :body
+
+
+      %fieldset.actions
+        = form.submit "Send"
     %p
       %i Coming Soon
   .large-4.columns
